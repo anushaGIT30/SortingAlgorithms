@@ -1,0 +1,79 @@
+in sorting we have
+1.Selection sort
+2.Bubble sort
+3. Insertion sort
+4.Merge sort
+5.Heap sort
+6. Quick sort
+
+
+
+1.Selection Sort:
+--->select minimum and swap it 
+ex: 13 46 24 52 20 9
+1st pass: the first min element is 9
+so swap 13 and 9
+    9  46  24 52 20 13
+2nd pass: next min element is 13 we have to look from next index
+    9  13  24 52 20 46
+3rd pass: min element is 20 swap 20 and 24
+    9  13  20  52 24 46
+4th pass:  min element is 24 swap 24 and 52
+    9  13  20  24  52 46
+5th pass: min element is 26 swap 26 and 52
+    9  13  20  24  46  52
+the time complexity:o(n2)-best,average,worst time complexity
+
+
+
+
+2.  Bubble Sort: 
+----->push the max to the last by adjacent swapping
+ex: 13 46 24 52 20 9 
+1st pass: 
+.compare 13 with 46  13<46  it is in correct order
+    13 46 24 52 20 9
+.then compare 46 and 24 46>24 then swap
+    13 24 46 52 20 9
+.now compare 46 and 52 52>46 it is correct
+    13 24 46 52 20 9
+.now compare 52 and 20 20<52 we swap
+    13 24 46 20 52 9
+.then compare 52 and 9 they are not correctso we swap
+    13 24 46 20 9 52
+-hence after the first pass the highest element is in the last position
+
+2nd pass: 13 24 46 20 9 52
+.compare 13 and 24 they are in correct position
+          13 24 46 20 9 52
+. now compare 24 and 46 they are correct
+          13 24 46 20 9 52
+.now comparing 46 and 20 they are in incorrect order we swap
+          13 24 20 46 9 52
+.then compare 46 and 9  46>9 we swap
+          13 24 20 9 46 52
+-hence  after the second pass 2 highest elements are sorted
+3rd pass: 13 24 20 9 46 52
+.here we compare 13 and 24 they are in sorted order
+          13 24 20 9 46 52
+.now compare 24 and 20 they are not sorted hence we swap 
+          13 20 24 9 46 52
+.now compare 24 and 9 they are not sorted 24>9
+          13 20 9 24 46 52   
+-for 3rd pass the 3 largest elements are at the last
+4th pass:
+         13 20 9 24 46 52
+.now comparing 13 and 20 they are in sorted order
+         13 20 9 24 46 52
+.now compare 20 and 9 they are not in sorted order we swap
+         13  9 20 24 46 52
+-hence after the 4 passess the 4 largest elements in the array is at last
+
+5th pass:
+        13 9 20 24 46 52
+ .here 13 and 9 are not in sorted order hence we swap
+        9 13  20 24 46 52
+  ----hence the sorted array is [9, 13 ,20, 24, 46, 52]      
+               
+    
+
